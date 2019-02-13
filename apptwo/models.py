@@ -6,4 +6,4 @@ class User(models.Model):
     email = models.EmailField(max_length=128, unique=True)
 
     def __str__(self):
-        print(self.email)
+        return self.email

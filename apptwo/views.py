@@ -4,9 +4,11 @@ from django.http import HttpResponse
 from apptwo.models import User
 
 def index(request):
-    return HttpResponse('<em> My Second App </em>')
+    return render(request, 'apptwo/index.html')
+
 
 def get_users(request):
-    users_dict = {'users': User.objects} 
+    users_list = User.objects.order_by('first_name')
+    users_dict = {'users': users_list} 
     
-    return render(request, 'apptwo/help.html', context=users_dict)
+    return render(request, 'apptwo/users.html', context=users_dict)

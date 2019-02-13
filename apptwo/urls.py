@@ -2,5 +2,5 @@ from django.urls import path, include
 from apptwo import views
 
 urlpatterns = [
-    path('', views.help, name='users'),
+    path('', views.get_users, name='users'),
 ]

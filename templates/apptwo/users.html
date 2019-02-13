@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>users</title>
+</head>
+
+<body>
+
+</body>
+<ol start="1">
+    {% for user in users %}
+    <li>
+            User info
+            <ul>
+                <li>
+                    First Name: {{user.first_name}}
+                </li>
+                <li>
+                    Last Name: {{user.last_name}}
+                </li>
+                <li>
+                    Email: {{user.email}}
+                </li>
+            </ul>
+    </li>
+    
+    {% endfor %}
+</ol>
+
+</html>
