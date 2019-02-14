@@ -16,7 +16,6 @@ def populate(n):
         fake_first_name = fakegen.name()
         fake_last_name = fakegen.name()
         fake_email = fakegen.email()
-        print('fakeemail = ' + fake_email)
         users = User.objects.get_or_create(first_name=fake_first_name, last_name=fake_last_name, email= fake_email)[0]
         users.save()
 
